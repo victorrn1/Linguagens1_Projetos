@@ -9,8 +9,7 @@ public class Conta {
 
     int numero;
     double saldo;
-    String titular;
-    String cpf;
+    Cliente titular; // Da as propriedades da Classe Cliente para a Classe Conta
 
     void visualizarSaldo() {
         System.out.println("Saldo = " + this.saldo);
@@ -22,16 +21,30 @@ public class Conta {
         }
     }
 
-    void sacar(double valor) {
-        if (valor <= this.saldo && valor >= 0) {
+    boolean sacar(double valor) {
+        if (this.saldo < valor) {
+            return false;
+        } else {
             this.saldo = this.saldo - valor;
-        } 
-        else {
-            System.out.println("Quer um empréstimo?");
+            return true;
         }
     }
 
-    void transferirDinheiro() {
+    boolean transferirPara(Conta c1, double valor) {
+        if (this.sacar(valor)) {
+            c1.depositar(valor);
+            return true;
+        } else {
+            System.out.println("Erro na transferência, por favor confira se seu saldo é suficiente.");
+            return false;
+        }
+    }
 
+    void exibirInformações() {
+        System.out.println("Nome do titular = " + this.titular.nome);
+        System.out.println("Sobrenome do titular = " + this.titular.sobrenome);
+        System.out.println("CPF do titular = " + this.titular.cpf);
+        System.out.println("Número da conta = " + this.numero);
+        System.out.println("--------- FIM ---------");
     }
 }

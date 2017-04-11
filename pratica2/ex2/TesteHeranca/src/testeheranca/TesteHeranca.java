@@ -13,7 +13,7 @@ public class TesteHeranca {
        GerenteDeVendas g1;
        g1 = new GerenteDeVendas ("Victor", "Nicolaus", "111.111.111-11", 5000, "01", "senha");
        Vendedor v1;
-       v1 = new Vendedor ("Ricardo", "Badinni", "222.222.222-22", 2500, "01", "01");
+       v1 = new Vendedor ("Ricardo", "Badinni", "222.222.222-22", 2500, "01", );
        
     }
     

@@ -1,21 +1,11 @@
-
 package testeheranca;
 
+public class GerenteDeVendas extends Vendedor{
 
-public class GerenteDeVendas {
-    private String nome;
-    private String sobrenome;
-    private String cpf;
-    private double salarioBase;
-    private String registro;
-    private static double taxaComissao = 0.3;
-    private double horaExtra;
-    private double totalVendas;
     private String senha;
     private int nVendedores;
 
-    public GerenteDeVendas(String nome, String sobrenome, String cpf, double salarioBase, String registro, String senha) 
-    {
+    public GerenteDeVendas(String nome, String sobrenome, String cpf, double salarioBase, String registro, String senha) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
@@ -23,73 +13,26 @@ public class GerenteDeVendas {
         this.registro = registro;
         this.senha = senha;
     }
-    
+
+    public boolean darAumento(Vendedor vend, double aumento, String senha) {
+        if (vend.getRegistroGerente().equals(this.registro)) {
+            if (senha.equals(this.senha)) {
+                if (aumento > 0) {
+                    vend.setSalarioBase(vend.getSalarioBase() * aumento + vend.getSalarioBase());
+                    return true;
+                }
+            }
+        } 
+        return true;        
+    }
+
     public double getNVendedores() {
         return this.nVendedores;
-    }
-    
-    public double getSalarioBase() {
-        return this.salarioBase;
-    }
-
-    public void setSalarioBase(double sB) {
-        if (sB > 0) {
-            this.salarioBase = sB;
-        }
-    }
-
-    public String getNome() {
-        return this.nome;
-    }
-
-    public String setNome(String nome) {
-        return this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return this.sobrenome;
-    }
-
-    public String setSobrenome(String sobrenome) {
-        return this.sobrenome = sobrenome;
-    }
-
-    public String getCpf() {
-        return this.cpf;
-    }
-
-    public String setCpf(String cpf) {
-        return this.cpf = cpf;
-    }
-
-    public String getRegistro() {
-        return this.registro;
-    }
-
-    public String setRegistro(String registro) {
-        return this.registro = registro;
-    }
-
-    public double getTaxaComissao() {
-        return GerenteDeVendas.taxaComissao;
-    }
-
-    public double setTaxaComissao(double tc) {
-        return GerenteDeVendas.taxaComissao = tc;
-    }
-
-    public double getHorasExtras() {
-        return this.horaExtra;
-    }
-
-    public double setHorasExtras(double he) {
-        return this.horaExtra = he;
     }
 
     /*public double calcularComissão() {
         return (this.totalVendas * GerenteDeVendas.taxaComissao);
     }*/
-
     public boolean contabilizarVenda(double valor) {
         if (valor < 0) {
             return false;
@@ -109,10 +52,10 @@ public class GerenteDeVendas {
     }
 
     public double salarioDoMes() {
-        return (this.salarioBase + this.horaExtra );
+        return (this.salarioBase + this.horaExtra);
     }
-    
-    public int acresceVendedor(){
+
+    public int acresceVendedor() {
         return this.nVendedores = this.nVendedores + 1;
     }
 

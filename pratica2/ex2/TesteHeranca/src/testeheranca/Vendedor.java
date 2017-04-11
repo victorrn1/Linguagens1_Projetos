@@ -3,25 +3,25 @@ package testeheranca;
 
 
 public class Vendedor {
-    private String nome;
-    private String sobrenome;
-    private String cpf;
-    private double salarioBase;
-    private String registro;
-    private static double taxaComissao = 0.3;
-    private double horaExtra;
-    private double totalVendas;
-    private GerenteDeVendas registroGerente;
+    protected String nome;
+    protected String sobrenome;
+    protected String cpf;
+    protected double salarioBase;
+    protected String registro;
+    protected static double taxaComissao = 0.3;
+    protected double horaExtra;
+    protected double totalVendas;
+    private String registroGerente;
 
-    public Vendedor(String nome, String sobrenome, String cpf, double salarioBase, String registro, GerenteDeVendas registroGerente) 
+    public Vendedor(String nome, String sobrenome, String cpf, double salarioBase, String registro, GerenteDeVendas gerente) 
     {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.salarioBase = salarioBase;
         this.registro = registro;
-        this.registroGerente= registroGerente;
-        this.registroGerente.acresceVendedor();
+        this.registroGerente= gerente.getRegistro();
+        gerente.acresceVendedor();
     }
 
     public double getSalarioBase() {
@@ -33,7 +33,9 @@ public class Vendedor {
             this.salarioBase = sB;
         }
     }
-
+    public String getRegistroGerente (){
+        return this.registroGerente;
+    }
     public String getNome() {
         return this.nome;
     }

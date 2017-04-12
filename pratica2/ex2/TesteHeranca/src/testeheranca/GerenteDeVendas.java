@@ -6,7 +6,8 @@ public class GerenteDeVendas extends Vendedor{
     private int nVendedores;
 
     public GerenteDeVendas(String nome, String sobrenome, String cpf, double salarioBase, String registro, String senha) {
-        this.nome = nome;
+        
+        super(nome, sobrenome, cpf, salarioBase, registro);
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.salarioBase = salarioBase;

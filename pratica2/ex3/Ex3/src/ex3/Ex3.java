@@ -3,15 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package testeheranca;
+package ex3;
 
-public class TesteHeranca {
+/**
+ *
+ * @author Professor
+ */
+public class Ex3 {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        GerenteDeVendas g1;
-        g1 = new GerenteDeVendas("Victor", "Nicolaus", "111.111.111-11", 5000, "01", "senha");
-        Vendedor v1;
-
+        // TODO code application logic here
     }
-
+    
 }

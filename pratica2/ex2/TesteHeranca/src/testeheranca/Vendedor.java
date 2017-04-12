@@ -1,8 +1,7 @@
-
 package testeheranca;
 
-
 public class Vendedor {
+
     protected String nome;
     protected String sobrenome;
     protected String cpf;
@@ -13,15 +12,12 @@ public class Vendedor {
     protected double totalVendas;
     private String registroGerente;
 
-    public Vendedor(String nome, String sobrenome, String cpf, double salarioBase, String registro, GerenteDeVendas gerente) 
-    {
+    public Vendedor(String nome, String sobrenome, String cpf, double salarioBase, String registro) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.salarioBase = salarioBase;
         this.registro = registro;
-        this.registroGerente= gerente.getRegistro();
-        gerente.acresceVendedor();
     }
 
     public double getSalarioBase() {
@@ -33,9 +29,11 @@ public class Vendedor {
             this.salarioBase = sB;
         }
     }
-    public String getRegistroGerente (){
+
+    public String getRegistroGerente() {
         return this.registroGerente;
     }
+
     public String getNome() {
         return this.nome;
     }
@@ -122,6 +120,3 @@ public class Vendedor {
         System.out.println("Décimo Terceiro: " + this.calcularDecimoTerceiro());
     }
 }
-
-    
-

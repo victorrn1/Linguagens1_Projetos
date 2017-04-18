@@ -5,10 +5,20 @@
  */
 package ex3;
 
-/**
- *
- * @author Professor
- */
+
+
 public class Concessionária {
+    
+    private static double totalDeVendas;
+    private static int totalDeFuncionarios;
+    private double bonusIndividual;
+    private static double taxaTotalDeVendas = 0.05;
+    
+    public void bonusIndividual (double bIndividual){
+       bIndividual = (Concessionária.taxaTotalDeVendas * Concessionária.taxaTotalDeVendas)/Concessionária.totalDeFuncionarios;
+        }
+    
+    
+    
     
 }

@@ -6,26 +6,25 @@
 package ex3;
 
 public class Funcionario {
-    
+
     protected String nomeCompleto;
     protected String cpf;
     protected String registro;
     protected double salarioBase;
-        
+
     //GETTER AND SETTERS
-    
-    public double getSalarioBase(){
+    public double getSalarioBase() {
         return this.salarioBase;
     }
-    
+
     public void setSalarioBase(double sB) {
         if (sB > this.salarioBase) {
             this.salarioBase = sB;
+        } else {
+            System.out.println("Você não pode abaixar o salário de um funcionário");
         }
-        else{
-            System.out.println("Você não pode abaixar o salário de um funcionário");}
     }
-    
+
     public String getNome() {
         return this.nomeCompleto;
     }
@@ -50,6 +49,9 @@ public class Funcionario {
         return this.registro = registro;
     }
 
-    //
-    
+    //Métodos adicionais
+    public double calcularBonus(double bIndividual) {
+        return bIndividual;
+    }
+
 }

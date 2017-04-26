@@ -52,6 +52,7 @@ public class Concessionária {
         bIndividual = (this.taxaTotalDeVendas * this.taxaTotalDeVendas) / this.totalDeFuncionarios;
         return bIndividual;
     }
+    
 
 }
 

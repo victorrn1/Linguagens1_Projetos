@@ -21,7 +21,7 @@ public class Vendedor extends Funcionario {
     }
 
     public double getSalarioTotal() {
-        return this.salarioBase + this.calcularBonus(Concessionária
+        return this.salarioBase + this.calcularBonus(Concessionária.bConcessionaria);
     }
     
     public void realizarVenda (double valorVenda){

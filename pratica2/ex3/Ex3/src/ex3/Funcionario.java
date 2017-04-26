@@ -9,20 +9,30 @@ public class Funcionario {
 
     protected String nomeCompleto;
     protected String cpf;
-    protected String registro;
+    protected int registro;
     protected double salarioBase;
+    
+    public Funcionario (String nome, String novoCpf, int novoReg, double novoSa)
+    { 
+        this.cpf = this.setCpf(novoCpf);
+        this.nomeCompleto = this.setNome(nome);
+        this.registro = this.setRegistro(novoReg);
+        this.salarioBase = this.setSalarioBase(novoSa);
+        
+    }
 
     //GETTER AND SETTERS
     public double getSalarioBase() {
         return this.salarioBase;
     }
 
-    public void setSalarioBase(double sB) {
+    public double setSalarioBase(double sB) {
         if (sB > this.salarioBase) {
             this.salarioBase = sB;
         } else {
             System.out.println("Você não pode abaixar o salário de um funcionário");
         }
+        return this.salarioBase;
     }
 
     public String getNome() {
@@ -41,11 +51,11 @@ public class Funcionario {
         return this.cpf = cpf;
     }
 
-    public String getRegistro() {
+    public int getRegistro() {
         return this.registro;
     }
 
-    public String setRegistro(String registro) {
+    public int setRegistro(int registro) {
         return this.registro = registro;
     }
 
@@ -53,5 +63,6 @@ public class Funcionario {
     public double calcularBonus(double bIndividual) {
         return bIndividual;
     }
-
+    
+    
 }

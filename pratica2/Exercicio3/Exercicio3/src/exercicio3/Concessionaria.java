@@ -12,6 +12,14 @@ public class Concessionaria {
         vendedores = new Vendedor[nVend];
         gerentes = new Gerente[nGer];
     }
+
+    public Vendedor getVendedores(int i) {
+        return vendedores[i];
+    }
+
+    public Gerente getGerentes(int i) {
+        return gerentes[i];
+    }
     
     private double calcularTotalVendas(){
         double totalVendas = 0;

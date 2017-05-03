@@ -12,6 +12,7 @@ abstract class Funcionario {
         this.registro = reg;
         this.salarioBase = sal;
     }
+    
 
     public String getNomeCompleto() {
         return nomeCompleto;

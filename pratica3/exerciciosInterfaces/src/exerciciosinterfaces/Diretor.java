@@ -6,18 +6,38 @@ package exerciciosinterfaces;
  */
 public class Diretor extends Funcionario implements IAutenticavel {
 
-    protected int senha;
+    private String senha;
     
-    public void darAumento(Funcionario f, int s, double aumento) {
-        f.salario = f.salario + aumento;
+    public Diretor (String nome, String CPF, double salario, String senha){
+        this.setNomeCompleto(nome);
+        this.setCpf(CPF);
+        this.setSalario(salario);
+        this.senha = senha;
+    }
+
+    public boolean darAumento(Funcionario f, String s, double aumento) {
+       
+        boolean retorno = false;
+        if (this.autentica(s)) {
+            f.setSalario(f.getSalario() + aumento);
+            retorno = true;
+        }
+        return retorno;
     }
 
     @Override
-    public boolean autentica(int senha) {
-        if (senha == this.senha) {
-            System.out.println("Autenticado com sucesso.");
-        }
-        return true;
+    public boolean autentica(String senha) {
+        return (this.senha.equals(senha));           
     }
 
+    public boolean alterarSenha(String novaSenha, String senhaAntiga) {
+        
+        boolean retorno = false;
+        
+        if (senhaAntiga.equals(this.senha)) {
+            this.senha = novaSenha;
+            retorno = true;
+        }
+        return retorno;        
+    }
 }

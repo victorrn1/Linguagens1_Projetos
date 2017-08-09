@@ -17,7 +17,11 @@ public class Tela2 extends javax.swing.JFrame {
     public Tela2() {
         initComponents();
     }
-
+    private static int n0 = 0;
+    private static int n1 = 0;
+    private static int n2 = 0;
+    private static String o = "";
+    private static int r = 0;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,8 +46,8 @@ public class Tela2 extends javax.swing.JFrame {
         jButton14 = new javax.swing.JButton();
         zero = new javax.swing.JButton();
         painel = new javax.swing.JTextField();
-        Thiago = new javax.swing.JButton();
         igual = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -151,17 +155,17 @@ public class Tela2 extends javax.swing.JFrame {
             }
         });
 
-        Thiago.setText("Thiago");
-        Thiago.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ThiagoActionPerformed(evt);
-            }
-        });
-
         igual.setText("=");
         igual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 igualActionPerformed(evt);
+            }
+        });
+
+        jButton1.setIcon(new javax.swing.ImageIcon("T:\\Linguagens 1\\14016176\\Linguagens1_Projetos\\Pratica5\\thiago.png")); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -170,90 +174,91 @@ public class Tela2 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(Thiago, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(painel, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton7))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton9)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton10))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton12)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton13)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton14)
+                                .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(mais))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jButton11)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(menos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jButton8)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(multiplicar)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(painel, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(igual)
-                .addGap(42, 42, 42))
+                                .addComponent(dividir, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton6)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton7))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton9)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton10))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton12)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton13)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jButton14)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(mais))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jButton11)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(menos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                            .addComponent(jButton8)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(multiplicar))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(igual, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(painel, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(multiplicar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11)
-                    .addComponent(jButton10)
-                    .addComponent(jButton9)
-                    .addComponent(menos))
+                .addComponent(painel)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton6)
+                            .addComponent(jButton7)
+                            .addComponent(jButton8)
+                            .addComponent(multiplicar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton11)
+                            .addComponent(jButton10)
+                            .addComponent(jButton9)
+                            .addComponent(menos))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(mais)
+                            .addComponent(jButton12)
+                            .addComponent(jButton13)
+                            .addComponent(jButton14))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dividir)
+                            .addComponent(zero)))
+                    .addComponent(igual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mais)
-                    .addComponent(jButton12)
-                    .addComponent(jButton13)
-                    .addComponent(jButton14))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dividir)
-                    .addComponent(zero)
-                    .addComponent(igual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Thiago)
-                .addGap(7, 7, 7))
+                .addComponent(jButton1)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ThiagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThiagoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ThiagoActionPerformed
-
     private void multiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicarActionPerformed
+        n1 = n0;
+        n0 = 0;
+        o = "*";
         painel.getText();
         painel.setText(painel.getText()+"*");
     }//GEN-LAST:event_multiplicarActionPerformed
@@ -263,74 +268,148 @@ public class Tela2 extends javax.swing.JFrame {
     }//GEN-LAST:event_painelActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"0");
+        n0 = n0*10 + 0;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_zeroActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"1");
+        n0 = n0*10 + 1;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"2");
+        n0 = n0*10 + 2;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"3");
+        n0 = n0*10 + 3;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"4");
+        n0 = n0*10 + 4;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"5");
+        n0 = n0*10 + 5;
+        if (o == ""){
+        painel.setText(Integer.toString(n0));
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"6");
+        n0 = n0*10 + 6;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"7");
+        n0 = n0*10 + 7;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o+ Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"8");
+        n0 = n0*10 + 8;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"9");
+        n0 = n0*10 + 9;
+        if (o == ""){
+        painel.setText(Integer.toString(n0) );
+        }
+        else{
+        painel.setText(Integer.toString(n1)+ o + Integer.toString(n0));
+        }
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_igualActionPerformed
-        painel.getText();
-        painel.setText(painel.getText()+"=");
+        n2 = n0;
+        if (o == "+")
+            painel.setText(Integer.toString(n1 + n2));
+        if (o == "-")
+            painel.setText(Integer.toString(n1 - n2));
+        if (o == "*")
+            painel.setText(Integer.toString(n1 * n2));
+        if (o == "/")
+            painel.setText(Integer.toString(n1 / n2));
+        n1 = 0;
+        n0 = 0;
+        n2 = 0; 
+        o ="";
     }//GEN-LAST:event_igualActionPerformed
 
     private void maisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maisActionPerformed
+        n1 = n0;
+        n0 = 0;
+        o = "+";
         painel.getText();
         painel.setText(painel.getText()+"+");
     }//GEN-LAST:event_maisActionPerformed
 
     private void dividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dividirActionPerformed
+        n1 = n0;
+        n0 = 0;
+        o = "/";
         painel.getText();
         painel.setText(painel.getText()+"/");
     }//GEN-LAST:event_dividirActionPerformed
 
     private void menosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menosActionPerformed
+        n1 = n0;
+        n0 = 0;
+        o = "-";
         painel.getText();
         painel.setText(painel.getText()+"-");
     }//GEN-LAST:event_menosActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        painel.setText("Você ganhou uma estrela");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     public static void main(String args[]) {
@@ -366,9 +445,9 @@ public class Tela2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Thiago;
     private javax.swing.JButton dividir;
     private javax.swing.JButton igual;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;

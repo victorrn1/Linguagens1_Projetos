@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="olajavafx.FXMLDocumentController">
+    <children>
+      <Button fx:id="BtnClick" alignment="CENTER" layoutX="117.0" layoutY="88.0" mnemonicParsing="false" onAction="#clickBotao" text="Can u hear me" />
+      <Label fx:id="LblMensagem" alignment="CENTER" layoutX="85.0" layoutY="57.0" prefHeight="17.0" prefWidth="150.0" text="Hellou" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="126.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="57.0" />
+    </children>
+</AnchorPane>

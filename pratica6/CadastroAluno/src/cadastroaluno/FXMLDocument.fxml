@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="447.0" prefWidth="612.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="cadastroaluno.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="447.0" prefWidth="612.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastro Aluno">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="206.0" layoutY="36.0" text="Nome" />
+                        <TextField layoutX="200.0" layoutY="62.0" prefHeight="25.0" prefWidth="358.0" />
+                        <Label layoutX="202.0" layoutY="98.0" text="Idade" />
+                        <TextField layoutX="199.0" layoutY="245.0" prefHeight="25.0" prefWidth="355.0" />
+                        <TextField layoutX="199.0" layoutY="313.0" prefHeight="25.0" prefWidth="354.0" />
+                        <Label layoutX="200.0" layoutY="283.0" text="Endereço" />
+                        <Label layoutX="209.0" layoutY="160.0" text="RG" />
+                        <Label layoutX="207.0" layoutY="220.0" text="CPF" />
+                        <TextField layoutX="199.0" layoutY="119.0" prefHeight="25.0" prefWidth="359.0" />
+                        <TextField layoutX="199.0" layoutY="184.0" prefHeight="25.0" prefWidth="357.0" />
+                        <Button layoutX="403.0" layoutY="361.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="172.0" text="Salvar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pesquisa">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView layoutX="151.0" layoutY="36.0" prefHeight="278.0" prefWidth="311.0" />
+                        <Button layoutX="462.0" layoutY="346.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="123.0" text="Pesquisar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

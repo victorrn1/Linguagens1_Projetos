@@ -12,6 +12,18 @@ public class ListaDeContatos {
 
     private ArrayList<Contato> lista = new ArrayList<>();
 
+    public ArrayList<Contato> getLista() {
+        return lista;
+    }
+    
+    public void Adicionar (String nome,int celular){
+        lista.add(new Contato(celular ,nome));
+    } 
+    public void Remover (int n){
+        lista.remove(n);
+    }
+
+    
     
 
 }

@@ -4,6 +4,12 @@ public class Contato {
     private int numero;
     private String nome;
 
+    public Contato(int numero, String nome) {
+        this.numero = numero;
+        this.nome = nome;
+    }  
+           
+    
     public int getNumero() {
         return numero;
     }

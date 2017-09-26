@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.victornicolaus.organizando;
 
-/**
- *
- * @author Aluno 12
- */
+import br.com.rafaelnegrao.organizando.Cliente;
+
 public class OrganizandoJavaV2 {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+      
+        br.com.victornicolaus.organizando.Cliente c = new br.com.victornicolaus.organizando.Cliente();
+        br.com.rafaelnegrao.organizando.Cliente eu = new br.com.rafaelnegrao.organizando.Cliente();
+        eu.retornaNome();
+        c.getNome();
+        
     }
     
 }

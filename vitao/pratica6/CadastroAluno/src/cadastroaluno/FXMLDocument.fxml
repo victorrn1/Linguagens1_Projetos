@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cadastroaluno.FXMLDocumentController">
+    <children>
+        <TabPane layoutX="6.0" layoutY="6.0" prefHeight="354.0" prefWidth="556.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Cadastro">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="451.0" prefWidth="776.0">
+                            <children>
+                                <ImageView fx:id="profilePic" fitHeight="170.0" fitWidth="170.0" layoutX="18.0" layoutY="15.0" pickOnBounds="true">
+                                    <image>
+                                        <Image url="file:/C:/Linguagens1_Projetos/pratica6/CadastroAluno/Avatar.png" />
+                                    </image>
+                                </ImageView>
+                           
+                                <Label layoutX="208.0" layoutY="14.0" text="Nome Completo:" wrapText="true" />
+                                <TextField fx:id="nomeCompleto" layoutX="207.0" layoutY="35.0" prefHeight="25.0" prefWidth="140.0" text="&#10;" />
+                                <Label layoutX="209.0" layoutY="76.0" prefHeight="17.0" prefWidth="53.0" text="Endereço:" wrapText="true" />
+                                <TextField fx:id="endereco" layoutX="208.0" layoutY="102.0" prefHeight="25.0" prefWidth="140.0" text="&#10;" />
+                                <Label layoutX="208.0" layoutY="138.0" text="Idade:" wrapText="true" />
+                                <TextField fx:id="idade" layoutX="208.0" layoutY="157.0" prefHeight="25.0" prefWidth="140.0" text="&#10;" />
+                                <Label layoutX="208.0" layoutY="201.0" text="CPF:" wrapText="true" />
+                                <TextField fx:id="cpf" layoutX="207.0" layoutY="221.0" prefHeight="25.0" prefWidth="140.0" text="&#10;" />
+                                <Label layoutX="208.0" layoutY="261.0" text="RG:" wrapText="true" />
+                                <TextField fx:id="rg" layoutX="207.0" layoutY="280.0" prefHeight="25.0" prefWidth="140.0" text="&#10;" />
+                                <Button layoutX="368.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnSaveText" prefHeight="85.0" prefWidth="170.0" text="Salvar" />
+                                <Button layoutX="18.0" layoutY="275.0" mnemonicParsing="false" onAction="#btnLimpar" prefHeight="30.0" prefWidth="170.0" text="Limpar" />
+                                <TextArea fx:id="txtArea" editable="false" layoutX="368.0" layoutY="17.0" prefHeight="165.0" prefWidth="170.0" />
+                                <Button layoutX="18.0" layoutY="217.0" mnemonicParsing="false" onAction="#pickImage" prefHeight="30.0" prefWidth="170.0" text="Alterar Imagem" />
+                        <Label fx:id="fileSelected" layoutX="89.0" layoutY="193.0" text="Label" visible="false" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Pesquisa">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
